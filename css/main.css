@@ -1,0 +1,443 @@
+ /* COLOR PALETTE
+https://color.adobe.com/search?q=vitamin%20C
+.Copy-of-Copy-of-Vitamin-C-1-hex { color: #004358; }
+.Copy-of-Copy-of-Vitamin-C-2-hex { color: #1F8A70; }
+.Copy-of-Copy-of-Vitamin-C-3-hex { color: #BEDB39; }
+.Copy-of-Copy-of-Vitamin-C-4-hex { color: #FFE11A; }
+.Copy-of-Copy-of-Vitamin-C-5-hex { color: #FD7400; }
+*/
+
+/*
+ * Text meant only for screen readers.
+ * @link https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
+ */
+ .screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+ /* Global styles*/
+ /* apply a natural box layout model to all elements */
+ *,
+ *:before,
+ *:after {
+   box-sizing: border-box;
+ }
+
+ body {
+   color: #000000;
+   margin: 0;
+   padding: 0;
+   font-family: 'Arvo', serif;
+   font-size: 15px;
+   line-height: 1.5;
+ }
+
+ h1,
+ h2 {
+   font-family: 'Arvo', serif;
+   font-weight: 400;
+   margin: 0;
+ }
+
+ h1 {
+   font-size: 80px;
+   /* line-height:2 ; */
+   text-align: center;
+ }
+
+ h2 {
+   font-size: 25px;
+   text-align: center;
+   padding: 10px;
+ }
+/* Styling between collapsible button and header */
+ .content-wrap {
+   max-width: 800px;
+   width: 85%;
+   margin: 0 auto;
+   padding: 30px 0;
+ }
+
+ /*Collapsible buttons*/
+ .collapsible {
+   background-color: #eee;
+   /* Changes the font color of the button */
+   color: #444;
+   /* Mouse pointer changes as we hover towards the button */
+   cursor: pointer;
+   padding: 18px;
+   /* We want the button to take the width of the screen */
+   width: 100%;
+   border: 2px solid	#000000;
+   /* Makes Text in the button is left aligned */
+   text-align: left;
+   /* No outline between the collapsible buttons */
+   outline: none;
+   font-size: 25px;
+   /* For Hovering effect */
+   transition:0.4s; 
+ }
+/* Add Style to the content of collapsible content */
+  .content {
+    padding: 0 18px;
+    /*Display set to None since initially we want to hide all the text and when a specific button is clicked that content gets displayed*/
+    display: none; 
+    /*This is hidden by default and will be shown using JavaScript*/
+    overflow: hidden;
+    background-color: #DCDCDC;
+  }
+ 
+ /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you hover the mouse over it */
+ .active, .collapsible:hover {
+   background-color: #ccc;
+ }
+
+ /* Add a symbol to each button to indicate whether the collapsible content is open or closed: */
+ .collapsible:after {
+   /* Unicode character for down arrow sign */
+   content: '\25be';
+   color:	#000000;
+   float: right;
+   margin-left: 5px;
+ }
+
+ /* When the accordion is clicked activate the up arrow key accordion  */
+ .active:after {
+   /* Unicode character for up arrow sign */
+   content: "\25b4";
+ }
+
+ /* Profile*/
+ header {
+   background:#FD7400;
+   color: #F7FFF7;
+ }
+
+ .about-me {
+   background-color: #FFE11A;
+ }
+
+ /* Work Experience*/
+ .work-experience {
+   background:#1F8A70;
+ }
+
+ .company {
+   font-size: 1.25rem;
+   font-style: normal;
+   /* text-decoration: underline dotted #491414; */
+   font-weight: 900;
+ }
+
+ .date {
+   font-style: italic;
+ }
+
+ /* Academic Qualification*/
+
+ .education {
+   background-image: url(../img/pcb.jpg);
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: cover;
+   padding-bottom: 100px;
+ }
+
+ .institution {
+   font-size: 1.25rem;
+   font-weight: 900;
+   font-style: normal;
+ }
+
+ /*Skills*/ 
+ .skills {
+  background-color: #004358;
+
+ }
+
+/*Achievement*/
+ .achievement {
+   background-color: #BEDB39;
+ }
+
+/*Contact*/
+
+ .contact {
+   background-color:  #3E38F2;
+   color: #000000;
+ }
+  .contact .social{
+  /* This changes the position of the icons and creates padding in contact form { */
+    padding: 0px;
+   text-align: center;
+   font-size: 16px;
+  } 
+
+ .contact .social a {
+   /* Space and Margin between the social icons */
+   margin:  10px;
+   padding:15px;
+ } 
+
+ .social a:hover {
+   color: rgb(228,255,26);
+ }
+ .social a:visited {
+   color: #ffe11a 
+ }
+
+/*Pop up -Form*/
+
+/*Setting background for the popup form*/
+.popupForm{
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,1); 
+  opacity:1;
+  position: fixed;
+  top:0;
+  border: 3px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+/* Popup form hidden by default: It hides all the children elements */
+  display:none; 
+  flex-wrap: wrap;
+}
+
+p{
+  margin-bottom: 1rem;
+  
+}
+.content{
+  padding-top: 3rem;
+  padding-bottom:1.5rem;
+}
+/* Styling the content in the popup form */
+.popupContent{
+  width: 500px;
+  height: auto;
+  background-color:#DAA520;
+  /* Smoothening of the border */
+  border-radius:10px;
+  padding:20px;
+  /* For image and content of the form to center */
+  text-align:center;
+  /* Position relative could be used here for better styling to maintain the X inside and on top of form.If popupContent is relative since it is the closest parent for close and close position would be absolute instead of position as fixed*/
+  position:fixed;
+}
+
+input{
+  width:70%;
+  display:block;
+/* To space between the inputs */
+  margin:20px auto;
+  border: 2px solid	#000000; 
+  font-size: 14px; 
+}
+textarea{
+    width:70%;
+    display:block;
+  /* To space between the inputs */
+    margin:20px auto;
+    border: 2px solid	#000000; 
+    font-size: 14px; 
+  }
+
+
+#submit{
+  background-color:#708090;
+  color:#000000
+}
+.close{
+  /*Position absolute could be used here for better styling.*/
+  position: fixed;
+  /* Top of popupContent */
+  top:0%;
+  right: 14px;
+  font-size:42px;
+  /* To transform the + sign to x we rotated the x sign 45 degree */
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+ /*Buttons and icons*/
+ button {
+   display: flex;
+   align-items: center;
+   min-height: 40px;
+   margin: 0.25px 0;
+   justify-content: space-between;
+
+ }
+ span {
+   /* Changing the font size and width of headers in button */
+   font-size: 14px;
+   font-family: "Arial Black", Gadget, sans-serif;
+   width: 50%;
+   color:#000000;
+ }
+
+ i {
+   margin-right: 16px;
+ }
+ 
+ .fa {
+  text-align: center;
+  font-size: 30px;
+  margin: 10px auto;
+}
+
+/* FOOTER*/
+
+  footer {
+    font-size: 16px;
+    margin-top: 50px;
+    flex-basis: 100%;
+    background: #343434;
+    color: #F7FFF7;
+    text-align:center;
+  }
+ 
+
+ /* Responsive for Tablets*/
+
+ @media screen and (min-width: 600px) {
+
+  header,
+  footer {
+    text-align: center;
+  }
+
+   body {
+     /*For testing only */
+     color: #800000;
+   }
+   .contact{
+    color: #800000; 
+   }
+   span {
+    /* Changing the font size and width of headers in button */
+    font-size: 16px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    width: 50%;
+    color:#000000;
+  }
+ 
+   .content {
+    /* Change the orientation from 'row' to 'column'. */
+    flex-direction: column;
+   }
+
+   .work-experience {
+     flex-basis: 100%;
+     /* Take up 100% of the horizontal space. */
+   }
+
+   .education{
+      flex-basis: 100%;
+      /* Take up 100% of the horizontal space. */
+    }
+    .contact .content-wrap {
+      flex-wrap: wrap;
+    }
+    .popupForm{
+      width:100%;
+      height:100%;
+      background-color:rgba(0,0,1,0.9);
+      opacity:1;
+      position: fixed;
+      bottom:50%;
+     border: 3px solid #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      display:none; 
+      flex-wrap: wrap;
+    }
+    input{
+      width:100%;
+      margin: 20px auto;
+      padding:10px;
+     border: 2px solid #000000;
+      display:block;
+    }
+    textarea{
+      width:100%;
+      margin: 20px auto;
+      padding:10px;
+     border: 2px solid #000000;
+      display:block;
+
+    }
+    .close{
+      /*Position absolute could be used here for better styling.*/
+      position: fixed;
+      top:0;
+      right: 20px;
+    }
+   }
+ 
+/* Responsive for Desktop/Laptop */
+
+ @media (min-width: 1024px) {
+   header {
+     padding: 75px 40px;
+   }
+
+   header h1 {
+     font-size: 80px;
+   }
+
+   header h2,
+   section h1 {
+     font-size: 25px;
+   }
+
+   .education h2 {
+     font-size: 25px;
+     background-color: rgba(255, 255, 255, 0.25);
+   }
+
+   .contact .content-wrap {
+    flex-wrap: wrap;
+ }
+
+ .popupForm{
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,1);
+  opacity:1;
+  position: fixed;
+  bottom:50%;
+  border: 3px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  display:none; 
+  flex-wrap: wrap;
+}
+
+}
+
+/* For printing page following properties would be followed*/
+
+@media print{
+  .collapse .content{
+    display:block;
+  }
+  .contact{
+    display:none;
+  }
+ .content-wrap{page-break-after: always;}
+}
+
