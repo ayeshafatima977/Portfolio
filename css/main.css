@@ -262,7 +262,7 @@ textarea{
   /*Position absolute could be used here for better styling.*/
   position: fixed;
   /* Top of popupContent */
-  top:0%;
+  top:5%;
   right: 14px;
   font-size:42px;
   /* To transform the + sign to x we rotated the x sign 45 degree */
