@@ -9,7 +9,7 @@ The resume Website includes a mobile, tablet and desktop layout implemented with
 1. https://trello.com/b/mExrrlxv/resume-milestone-1
 
 # Published Resume-Website:
-https://ayeshafatima977.github.io/Resume/
+https://ayeshafatima977.github.io/Portfolio/
 
 # Citations:
 Following sources were referred to complete this project:
